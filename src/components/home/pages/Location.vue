@@ -12,6 +12,8 @@
 </template>
 <style lang="less" scoped>
 .location {
+	background: #fff;
+
 	display: flex;
 	border-top: 1px solid #ddd;
 	.location-item {

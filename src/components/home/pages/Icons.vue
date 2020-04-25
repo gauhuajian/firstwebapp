@@ -90,6 +90,7 @@ export default {
 <style lang="less" scoped>
 .icons {
 	width: 100%;
+	background: #fff;
 	overflow: hidden;
 	.item-icons {
 		padding: 0.2rem 0;
