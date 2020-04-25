@@ -1,13 +1,13 @@
 <template>
-	<div id="app">
-		<Home />
+	<div>
+		<Header />
 	</div>
 </template>
 <script>
-import Home from './components/home/Home';
+import Header from './Header';
 export default {
 	components: {
-		Home,
+		Header,
 	},
 };
 </script>
