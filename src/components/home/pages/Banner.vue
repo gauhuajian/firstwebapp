@@ -1,7 +1,7 @@
 <template>
 	<div class="banner">
 		<swiper :options="swiperOption" ref="mySwiper">
-			<swiper-slide v-for="item in bannerList" :key="item.id">
+			<swiper-slide v-for="item in banner" :key="item.id">
 				<img :src="item.imgUrl" alt="" />
 			</swiper-slide>
 			<div class="swiper-pagination" slot="pagination"></div>
@@ -10,13 +10,9 @@
 </template>
 <script>
 export default {
+	props: ['banner'],
 	data() {
 		return {
-			bannerList: [
-				{ id: 0, imgUrl: require('@/assets/img/swiper1.jpg') },
-				{ id: 1, imgUrl: require('@/assets/img/swiper2.jpg') },
-				{ id: 2, imgUrl: require('@/assets/img/swiper3.jpg') },
-			],
 			swiperOption: {
 				pagination: {
 					el: '.swiper-pagination',

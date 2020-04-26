@@ -2,21 +2,27 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 import home from '../components/home/Home.vue'
+const city = () => import('../components/city/City.vue')
 const routes = [
 
   {
     path: '',
-    rederect: '/home'
+    redirect: '/home'
   },
   {
     path: '/home',
-    components: home
-  }
+    component: home
+  },
+
+  {
+    path: '/city',
+    component: city
+  },
 
 ]
 
 const router = new VueRouter({
-  mode: 'hash',
+  mode: 'history',
   base: process.env.BASE_URL,
   routes
 })

@@ -9,11 +9,20 @@
 		</div>
 
 		<div class="header-right">
-			<span>北京</span>
+			<span @click="toCity">北京</span>
 			<i class="iconfont">&#xe606;</i>
 		</div>
 	</div>
 </template>
+<script>
+export default {
+	methods: {
+		toCity() {
+			this.$router.push('/city');
+		},
+	},
+};
+</script>
 <style lang="less" scoped>
 @import '~@/assets/css/base.less';
 .home-header {
