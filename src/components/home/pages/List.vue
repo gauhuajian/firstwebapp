@@ -4,7 +4,7 @@
 			<img src="http://img1.qunarzz.com/piao/fusion/1711/89/ebc329f16c55bb02.png" alt="" />
 			<span>猜你喜欢</span>
 		</div>
-		<div class="list-item" v-for="item in list" :key="item.id">
+		<div class="list-item" v-for="item in list" :key="item.id" @click="toDetails">
 			<div class="item-img">
 				<img :src="item.imgUrl" alt="" />
 			</div>
@@ -24,6 +24,11 @@
 <script>
 export default {
 	props: ['list'],
+	methods: {
+		toDetails() {
+			this.$router.push('/details');
+		},
+	},
 };
 </script>
 <style lang="less" scoped>
