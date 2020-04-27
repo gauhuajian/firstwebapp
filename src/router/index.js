@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 import home from '../components/home/Home.vue'
 const city = () => import('../components/city/City.vue')
+const details = () => import('../components/details/Details.vue')
 const routes = [
 
   {
@@ -17,6 +18,10 @@ const routes = [
   {
     path: '/city',
     component: city
+  },
+  {
+    path: '/details',
+    component: details
   },
 
 ]

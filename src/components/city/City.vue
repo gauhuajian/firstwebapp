@@ -1,21 +1,15 @@
 <template>
 	<div class="city">
 		<Header />
-		<Hot :hotCities="hotCities" />
-		<Sort :cities="cities" />
-		<List :cities="cities" />
+		<List :hotCities="hotCities" :cities="cities" />
 	</div>
 </template>
 <script>
 import Header from './pages/Header';
-import Hot from './pages/Hot';
-import Sort from './pages/Sort';
 import List from './pages/List';
 export default {
 	components: {
 		Header,
-		Hot,
-		Sort,
 		List,
 	},
 	data() {

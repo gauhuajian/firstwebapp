@@ -1,6 +1,6 @@
 <template>
 	<header class="city-header">
-		<div class="header-left">
+		<div class="header-left" @click="toHome">
 			<i class="iconfont">&#xe601;</i>
 		</div>
 		<div class="header-title">
@@ -8,6 +8,15 @@
 		</div>
 	</header>
 </template>
+<script>
+export default {
+	methods: {
+		toHome(){
+			this.$router.push('/')
+		}
+	},
+}
+</script>
 <style lang="less" scoped>
 @import '~@/assets/css/base.less';
 .city-header {
